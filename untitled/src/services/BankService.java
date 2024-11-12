@@ -39,7 +39,7 @@ public class BankService {
             int rowsUpdated = pstmt.executeUpdate();
 
             if (rowsUpdated > 0) {
-                user.setBalance(user.getBalance() + amount); // Update the user's balance in memory
+                user.setBalance((int) (user.getBalance() + amount)); // Update the user's balance in memory
                 System.out.println("Deposit successful. New balance: $" + user.getBalance());
                 return true;
             }
@@ -68,7 +68,7 @@ public class BankService {
             int rowsUpdated = pstmt.executeUpdate();
 
             if (rowsUpdated > 0) {
-                user.setBalance(user.getBalance() - amount); // Update the user's balance in memory
+                user.setBalance((int) (user.getBalance() - amount)); // Update the user's balance in memory
                 System.out.println("Withdrawal successful. New balance: $" + user.getBalance());
                 return true;
             }

@@ -8,9 +8,21 @@ public class User {
     private String gender;
     private int age;
     private String bankAccount;
+    private int balance;
+
+    public User(String username, String password, String fullName, String dob, String gender, int age, String bankAccount) {
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance=balance;
+    }
 
     // Constructor with all fields
-    public User(String username, String password, String fullName, String dob, String gender, int age, String bankAccount) {
+    public User(String username, String password, String fullName, String dob, String gender, int age, String bankAccount, int balance) {
         this.username = username;
         this.password = password;
         this.fullName = fullName;
@@ -18,6 +30,7 @@ public class User {
         this.gender = gender;
         this.age = age;
         this.bankAccount = bankAccount;
+        this.balance = balance;
     }
 
     // Getters and setters
