@@ -40,7 +40,8 @@ public class AuthService {
                         rs.getString("dob"),
                         rs.getString("gender"),
                         rs.getInt("age"),
-                        rs.getString("bankAccount")
+                        rs.getString("bankAccount"),
+                        rs.getInt("balance")
                 );
                 return user;
             }
